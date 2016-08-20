@@ -53,6 +53,20 @@
 				transition-duration: 0.2s;
 			}
 
+			img {
+				-webkit-filter: grayscale(30%); /* Chrome, Safari, Opera */
+				filter: grayscale(30%);
+				opacity: 0.5;
+				filter: alpha(opacity=50); /* For IE8 and earlier */
+				transition-timing-function: ease-in-out;
+				transition-duration: 0.1s;
+			}
+
+			img:hover {
+				opacity: 1.0;
+				filter: alpha(opacity=100); /* For IE8 and earlier */
+			}
+
 			footer {
 				bottom: 0;
 			}
@@ -92,7 +106,12 @@
 	<main>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2"></div>
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<a href="https://www.linkedin.com/in/marco-antonio-blos-de-souza-09471645?trk=nav_responsive_tab_profile_pic">
+						<img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAggAAAAJDEwZjgyODgzLTFmMzctNDlhZS05Yjc1LWI4ZGZkMjRiOWI5OQ.jpg" alt="Foto pessoal do Marco" class="img-circle img-responsive">
+					</a>
+				</div>
 				<div class="col-md-8">
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -104,7 +123,7 @@
 						vehicula nulla. Quisque congue arcu nec.
 					</p>
 				</div>
-				<div class="col-md-2"></div>
+				<div class="col-md-1"></div>
 			</div>
 		</div>
 	</main>
