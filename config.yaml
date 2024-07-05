@@ -1,0 +1,92 @@
+baseURL: https://marcoblos.github.io/
+languageCode: en-us
+title: DevNarrative.com
+theme: ["PaperMod"]
+copyright: "© [Marco Blos](https://marcoblos.github.io/)"
+params:
+  env: production
+  keywords: [Blog, Software Development, Development Experience, DevEx]
+  description: "Marco's Tech Blog - https://marcoblos.github.io/"
+  author: Marco Blos
+  ShowShareButtons: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  showtoc: false
+
+  profileMode:
+    enabled: false
+    # title: Marco Blos
+    # imageUrl: "#"
+    # imageTitle: my image
+    # imageWidth: 120
+    # imageHeight: 120
+    # buttons:
+    #   - name: Archive
+    #     url: archive
+    #   - name: Tags
+    #     url: tags
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
+  homeInfoParams:
+    Title: "Home"
+    Content: >
+      Software development is a constantly evolving field, and we are continually discovering new techniques and tools to enhance our craft.
+      With extensive experience as a software developer and consultant for major tech companies, I have dedicated this blog to sharing insights, and practices that simplify the process of building robust software.
+      Since starting my career, I've focused on documenting and resolving programming challenges, optimizing development environments, and fostering efficient workflows.
+      Through DevNarrative, I aim to provide valuable content that helps developers understand complex systems better and improve their overall development experience.
+
+  # analytics:
+  #   google:
+  #     SiteVerificationTag: "G-91MMVV0BW2"
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+mainsections: ["posts", "papermod"]
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      # category: categories
+      tag: tags
+      # series: series
+    menu:
+      main:
+        - name: Archive
+          url: archive/
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+
+services:
+  googleAnalytics:
+    ID: G-91MMVV0BW2
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
